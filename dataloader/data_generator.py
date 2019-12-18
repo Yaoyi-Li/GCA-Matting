@@ -381,11 +381,6 @@ class OriginScale(object):
         pad_h = target_h - h
         pad_w = target_w - w
 
-        # padded_image = np.zeros([target_h, target_w, 3])
-        # padded_trimap = np.zeros([target_h, target_w])
-        # padded_image[:h, :w, :] = sample['image']
-        # padded_trimap[:h, :w] = sample['trimap']
-
         padded_image = np.pad(sample['image'], ((0,pad_h), (0, pad_w), (0,0)), mode="reflect")
         padded_trimap = np.pad(sample['trimap'], ((0,pad_h), (0, pad_w)), mode="reflect")
 

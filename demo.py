@@ -27,24 +27,10 @@ def single_inference(model, image_dict, return_offset=True):
         alpha_pred[trimap_argmax == 2] = 1
         alpha_pred[trimap_argmax == 0] = 0
 
-        # for i in range(1):
-        #     new_trimap = alpha_pred
-        #     trimap[:,0:1,...] = (new_trimap < 1e-3).float()
-        #     trimap[:,1:2,...] = ((new_trimap >= 1e-3) & (new_trimap <= 1-1e-3)).float()
-        #     trimap[:,2:,...] = (new_trimap > 1-1e-3).float()
-        #     alpha_pred, info_dict = model(image, trimap)
-        #     trimap_argmax = trimap.argmax(dim=1, keepdim=True)
-        #     alpha_pred[trimap_argmax == 2] = 1
-        #     alpha_pred[trimap_argmax == 0] = 0
-
-
         h, w = alpha_shape
         test_pred = alpha_pred[0, 0, ...].data.cpu().numpy() * 255
         test_pred = test_pred.astype(np.uint8)
         test_pred = test_pred[32:h+32, 32:w+32]
-        #
-        # if image_dict['doubled']:
-        #     test_pred = cv2.resize(test_pred, (w // 2, h // 2), interpolation=cv2.INTER_LINEAR)
 
         if return_offset:
             short_side = h if h < w else w
@@ -76,15 +62,7 @@ def generator_tensor_dict(image_path, trimap_path):
 
     # reshape
     h, w = sample["alpha_shape"]
-    # if h < 960 and w < 960:
-    #     h = h * 2
-    #     w = w * 2
-    #     sample['doubled'] = True
-    #     sample['image'] = cv2.resize(sample['image'], (w, h), interpolation=cv2.INTER_LINEAR)
-    #     sample['trimap'] = cv2.resize(sample['trimap'], (w, h), interpolation=cv2.INTER_NEAREST)
-    #     sample['alpha_shape'] = sample['trimap'].shape
-    # else:
-    #     sample['doubled'] = False
+    
     if h % 32 == 0 and w % 32 == 0:
         padded_image = np.pad(sample['image'], ((32,32), (32, 32), (0,0)), mode="reflect")
         padded_trimap = np.pad(sample['trimap'], ((32,32), (32, 32)), mode="reflect")
