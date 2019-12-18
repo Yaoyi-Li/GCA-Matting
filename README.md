@@ -3,10 +3,11 @@ The source codes and models of Natural Image Matting via Guided Contextual Atten
 
 Matting results on test data from alphamatting.com with trimap-user.
 <p align="center">
-  <img src="demo/input_lowres/troll.png" width="180" title="Original Image"/>
-  <img src="demo/trimap_lowres/Trimap3/troll.png" width="180" title="Trimap User"/>
-  <img src="demo/pred/Trimap3/gca-dist-all-data_gca-dist-all-data.pth/troll.png" width="180" title="GCA Matting"/>
-  <img src="demo/pred/Trimap3/gca-dist-all-data_gca-dist-all-data.pth/troll_offset1.png" width="180" title="Offset 1"/>
+  <img src="demo/input_lowres/troll.png" width="160" title="Original Image"/>
+  <img src="demo/trimap_lowres/Trimap3/troll.png" width="160" title="Trimap User"/>
+  <img src="demo/pred/Trimap3/gca-dist-all-data_gca-dist-all-data.pth/troll.png" width="160" title="GCA Matting"/>
+  <img src="demo/pred/Trimap3/gca-dist-all-data_gca-dist-all-data.pth/troll_offset1.png" width="160" title="Offset 1"/>
+  <img src="demo/pred/Trimap3/gca-dist-all-data_gca-dist-all-data.pth/troll_offset2.png" width="160" title="Offset 2"/>
 </p>
 
 ## Requirements
@@ -23,8 +24,9 @@ GPU memory >= 8GB for inference on Adobe Composition-1K testing set
 
 ## Models
 **The models pretrained on Adobe Image Matting Dataset are covered by [Adobe Deep Image Mattng Dataset License Agreement](https://drive.google.com/open?id=1MKRen-TDGXYxm9IawPAZrdXQIYhI0XRf) and can only be used and distributed for noncommercial purposes.**
-| Model Name  |    Training Data  | File Size           | SAD | MSE | Grad | Conn |
-| :------------- |:------|------------:| :-----|---|---|---|---|
+
+| Model Name  |    Training Data  | File Size   | SAD | MSE | Grad | Conn |
+| :------------- |:------|------------:| :-----|----:|----:|----:|
 | [ResNet34_En_nomixup](https://drive.google.com/open?id=1kNj33D7x7tR-5hXOvxO53QeCEC8ih3-A) | ISLVRC 2012 | 166 MB |N/A|N/A|N/A|N/A|
 | [gca-dist](https://drive.google.com/open?id=1ti_a46lKEH2Hk2fAB11BbyKfYj0rxNK0)      |Adobe Matting Dataset| 96.5 MB      |   0.0091 |35.28|16.92|32.53|
 | [gca-dist-all-data](https://drive.google.com/open?id=1GrFrV7guwOQB3N1-bx1iByw_LJNYnIw_) |Adobe Matting Dataset <br> + Composition-1K| 96.5 MB       |  - |-|-|-|
@@ -58,7 +60,7 @@ If your ground truth images are in `./Combined_Dataset/Test_set/Adobe-licensed i
 New alpha images will be generated in `Combined_Dataset/Test_set/Adobe-licensed images/alpha_copy`
 
 ### Configuration
-To be continued
+To be continued :zzz:
 ### Training
 Default training requires 4 GPUs with 11GB memory, and the batch size is 10 for each GPU. You can train the model by 
 ```bash
