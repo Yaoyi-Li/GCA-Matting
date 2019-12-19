@@ -17,7 +17,7 @@ CONFIG.world_size = 1
 CONFIG.model = EasyDict({})
 # use pretrained checkpoint as encoder
 CONFIG.model.imagenet_pretrain = True
-CONFIG.model.imagenet_pretrain_path = "/home/liyaoyi/Source/python/attentionMatting/pretrain/model_best_resnet34_D_nomixup.pth.tar"
+CONFIG.model.imagenet_pretrain_path = "/home/liyaoyi/Source/python/attentionMatting/pretrain/model_best_resnet34_En_nomixup.pth"
 CONFIG.model.batch_size = 16
 # one-hot or class, choice: [3, 1]
 CONFIG.model.trimap_channel = 3

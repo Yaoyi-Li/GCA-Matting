@@ -4,7 +4,7 @@ dist = true
 [model]
 batch_size = 10
 imagenet_pretrain = true
-imagenet_pretrain_path = "pretrain/model_best_resnet34_D_nomixup.pth.tar"
+imagenet_pretrain_path = "pretrain/model_best_resnet34_En_nomixup.pth"
     [model.arch]
     encoder = "resnet_gca_encoder_29"
     decoder = "res_gca_decoder_22"
