@@ -1,5 +1,5 @@
 # GCA-Matting: Natural Image Matting via Guided Contextual Attention
-The source codes and models of Natural Image Matting via Guided Contextual Attention which will appear in AAAI-20. 
+The source codes and models of [**Natural Image Matting via Guided Contextual Attention**](https://arxiv.org/pdf/2001.04069.pdf) which will appear in AAAI-20. 
 
 Matting results on test data from alphamatting.com with trimap-user.
 <p align="center">
