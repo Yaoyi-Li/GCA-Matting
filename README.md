@@ -25,7 +25,7 @@ GPU memory >= 8GB for inference on Adobe Composition-1K testing set
 ## Models
 **The models pretrained on Adobe Image Matting Dataset are covered by [Adobe Deep Image Mattng Dataset License Agreement](https://drive.google.com/open?id=1MKRen-TDGXYxm9IawPAZrdXQIYhI0XRf) and can only be used and distributed for noncommercial purposes.**
 
-| Model Name  |    Training Data  | File Size   | SAD | MSE | Grad | Conn |
+| Model Name  |    Training Data  | File Size   |MSE|  SAD  | Grad | Conn |
 | :------------- |:------|------------:| :-----|----:|----:|----:|
 | [ResNet34_En_nomixup](https://drive.google.com/open?id=1kNj33D7x7tR-5hXOvxO53QeCEC8ih3-A) | ISLVRC 2012 | 166 MB |N/A|N/A|N/A|N/A|
 | [gca-dist](https://drive.google.com/open?id=1ti_a46lKEH2Hk2fAB11BbyKfYj0rxNK0)      |Adobe Matting Dataset| 96.5 MB      |   0.0091 |35.28|16.92|32.53|
