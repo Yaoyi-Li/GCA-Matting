@@ -112,3 +112,16 @@ python main.py \
 
 The predictions will be save to** `./prediction` by default, and you  can **evaluate the results by the MATLAB file** `./DIM_evaluation_code/evaluate.m` in which the evaluate functions are provided by [Deep Image Matting](https://sites.google.com/view/deepimagematting).
 **Please do not report the quantitative results calculated by our python code like** `./utils/evaluate.py` **or this** `test.sh` **in your paper or project.** **The Grad and Conn functions of our reimplementation are not exactly the same as MATLAB version.** 
+
+### Citation
+If you find this work or code useful for your research, please cite:
+```
+@inproceedings{li2020natural,
+  title={Natural image matting via guided contextual attention},
+  author={Li, Yaoyi and Lu, Hongtao},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  pages={11450--11457},
+  year={2020}
+}
+```
